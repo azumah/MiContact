@@ -9,26 +9,33 @@ class MiContact extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.teal[500],
         body: SafeArea(
-            child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              color: Colors.red,
-              width: 100,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(color: Colors.yellow, width: 100, height: 100),
-                Container(color: Colors.green, width: 100, height: 100),
-              ],
-            ),
-            Container(color: Colors.blue, width: 100),
-          ],
-        )),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage('images/headshot.jpg'),
+              ),
+              Text(
+                'Nelson Klutse',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35.0,
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'SOFTWARE DEVELOPER',
+                style: TextStyle(
+                    color: Colors.white54,
+                    fontSize: 14.0,
+                    fontFamily: 'SourceSansPro',
+                    fontWeight: FontWeight.normal),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
